@@ -1,0 +1,5 @@
+#banner{
+    background-image: url(../assets/banner.jpg);
+    background-position:top;
+    background-size: cover;
+}
