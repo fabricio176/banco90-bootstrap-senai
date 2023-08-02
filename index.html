@@ -28,11 +28,48 @@
                         <li class="navbar-item"><a href="#" class="nav-link text-white">Sua Conta</a></li>
                     </ul>
                     <ul class="navbar-nav">
-                        <li class="navbar-item"><button class="btn btn-outline text-white border-white"> Abra sua conta!
+                        <li class="navbar-item"><button class="btn btn-outline text-white border-white"
+                                data-bs-toggle="modal" data-bs-target="#popUpLogin"> LOGIN
                             </button></li>
                     </ul>
                 </div>
             </nav>
+            <div class="modal" id="popUpLogin">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- MODAL HEADER -->
+                        <div class="modal-header d-flex justify-content-center">
+                            <h3>LOGIN</h3>
+                        </div>
+                        <!-- MODAL HEADER -->
+
+                        <!-- MODAL BODY -->
+                        <div class="modal-body">
+                            <form action="#" method="post">
+                                <div class="form-group my-3">
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="email" name="email" id="email"
+                                        placeholder="Digite seu email">
+                                </div>
+                                <div class="form-group my-3">
+                                    <label for="password">Senha</label>
+                                    <input autocomplete="off" class="form-control" type="password" name="password"
+                                        id="password" placeholder="Digite sua senha">
+                                </div>
+                                <button class="btn btn-warning" type="reset">Limpar</button>
+                                <button class="btn btn-success" type="submit">Enviar</button>
+                            </form>
+                        </div>
+                        <!-- MODAL BODY -->
+
+                        <!-- MODAL FOOTER -->
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                        <!-- MODAL FOOTER -->
+                    </div>
+                </div>
+            </div>
         </header>
         <!-- ---------- HEADER -------- -->
 
@@ -63,12 +100,59 @@
                         <img src="assets/banner4.jpg" alt="" class="d-block" style="width: 100% ; height:700px">
                     </div>
                 </div>
+                <!-- ARROW INDICATOR -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <!-- ARROW INDICATOR -->
+
             </div>
             <!-- CAROUSEL -->
 
-            <!-- MIDDLE -->
-            <div class="container my-4" style="height: 450px;">
-                <h2 style="text-align: center;"><b>ESCOLHA SUA FORMA DE PAGAMENTO PREFERIDA</b></h2>
+            <!-- MIDDLE(PAYMENT) -->
+            <div class="container">
+                <div class="row text-center d-flex justify-content-center align-items-center">
+                    <div class="col-12">
+                        <h2 class="bold">ESCOLHA SUA FORMA DE PAGAMENTO PREFERIDA</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center my-5">
+                    <div class="col-3 mx-3">
+                        <div class="card p-5" style="height: 400px ;">
+                            <img src="assets/codigoDeBarras.svg" alt="">
+                            <div class="card-body text-center ">
+                                <h3 class="card-title bold">BOLETO</h3>
+                                <p class="card-text">Processamento em até 48 Horas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-5" style="height: 400px ;">
+                            <img src="assets/CartaoDeCredito.svg" alt="Código de Barras">
+                            <div class="card-body text-center">
+                                <h3 class="card-title bold">CARTÃO</h3>
+                                <p class="card-text">Divida em até 24 vezes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 mx-3">
+                        <div class="card p-5" style="height: 400px ;">
+                            <img src="assets/Dinheiro.svg" alt="Icone de cartão de crédito">
+                            <div class="card-body text-center">
+                                <h3 class="card-title bold">CARTÃO</h3>
+                                <p class="card-text">15% de Desconto!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container my-4" style="height: 450px;">
+                <h2 style="text-align: center;"><b>ESCOLHA A SUA FORMA DE PAGAMENTO PREFERIDA</b></h2>
                 <div class="container my-5 p-0 d-flex align-items-center justify-content-center">
                     <div class="container border mx-4" style="">
                         <div class="container d-flex justify-content-center" style=" height: 200px;">
@@ -89,12 +173,13 @@
                         <p class="bold">DINHEIRO</p>
                     </div>
                 </div>
-            </div>
-            <!-- MIDDLE -->
+            </div> -->
+            <!-- MIDDLE(PAYMENT) -->
             <div class="container-fluid d-flex mb-4" style="background-color: #302727;">
                 <div class="container text-white" style="width: 50%; ">
                     <h1 class="bold mt-5" style="text-align: justify;">Contrate nossos serviços</h1>
-                    <p class="mt-4" style="width: 80%;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui quod officiis eum
+                    <p class="mt-4" style="width: 80%;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+                        quod officiis eum
                         tempore aut
                         nostrum nulla corporis magnam tempora at, odio similique deleniti rem repellendus recusandae
                         blanditiis dolorem, voluptas doloremque.
@@ -110,23 +195,69 @@
                 </div>
             </div>
             <h1 class="bold" style="text-align: center;">SEJA CLIENTE DE DIVERSAS MANEIRAS!</h1>
-            <div class="container d-flex" style="width: 100%; height: 350px;" >
-                <div class="container m-5" id="clientImg1" style="width: 30%; height: 100%;">
-                  
+            <div class="container d-flex" style="width: 100%; height: 400px;">
+                <div class="container m-5" id="clientImg1" style="width: 30%; height: 80%;">
+
                 </div>
-                <div class="container my-5" id="clientImg2"style="width: 30%; height: 100%;" >
-                   
+                <div class="container my-5" id="clientImg2" style="width: 30%; height: 80%;">
+
                 </div>
-                <div class="container m-5" id="clientImg3" style="width: 30%; height: 100%;">
-                    
+                <div class="container m-5" id="clientImg3" style="width: 30%; height: 80%;">
+
                 </div>
+            </div>
+            <div class="container bg-white shadow-lg p-3 mb-5 bg-dark rounded" style="width:55% ;height:auto;">
+                <!-- TABLE -->
+                <table class="table" id="tableform">
+                    <h2 class="bold pt-3 pb-2">Horários de atendimento</h2>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">SEGUNDA</th>
+                            <th scope="col">TERÇA</th>
+                            <th scope="col">QUARTA</th>
+                            <th scope="col">QUINTA</th>
+                            <th scope="col">SEXTA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Marcelo</th>
+                            <td>09:00 até as 13:00</td>
+                            <td>08:00 até as 12:00</td>
+                            <td>09:00 até as 14:00</td>
+                            <td>09:00 até as 12:00</td>
+                            <td>09:00 até as 12:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Daniela</th>
+                            <td>09:00 até as 13:00</td>
+                            <td>08:00 até as 12:00</td>
+                            <td>09:00 até as 14:00</td>
+                            <td>09:00 até as 12:00</td>
+                            <td>09:00 até as 12:00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">João</th>
+                            <td>09:00 até as 13:00</td>
+                            <td>08:00 até as 12:00</td>
+                            <td>09:00 até as 14:00</td>
+                            <td>09:00 até as 12:00</td>
+                            <td>09:00 até as 12:00</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </main>
         <!-- ---------- MAIN -------- -->
 
         <!-- ---------- FOOTER -------- -->
         <footer>
-
+            <div class="container">
+                Todos os direitos reservados a Bank 90!
+            </div>
         </footer>
         <!-- ---------- FOOTER -------- -->
     </div>
